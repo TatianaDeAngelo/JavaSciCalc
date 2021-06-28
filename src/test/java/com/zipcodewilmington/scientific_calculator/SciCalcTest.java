@@ -1,6 +1,5 @@
 package com.zipcodewilmington.scientific_calculator;
 
-import com.zipcodewilmington.scientificcalculator.Factorial;
 //import com.zipcodewilmington.scientificcalculator.MainApplication;
 import org.junit.Assert;
 import org.junit.Test;
@@ -148,12 +147,9 @@ public class SciCalcTest { //first brace
 
         //Then
         Assert.assertEquals(expectedValue, actualValue, .001);
-        System.out.println(expectedValue);
     }   // ends exponential (euler's-inverse natural log)
 
-    // start code to try out degrees
 
-    // end code to try out degrees
 
     @Test
     public void testFactorial() {
@@ -163,12 +159,42 @@ public class SciCalcTest { //first brace
         double expectedValue = 6;
 
         //When
-        double actualValue = Factorial.factorial(num1);
+        double actualValue = calculator.factorial(num1);
+
+        //Then
+        Assert.assertEquals(expectedValue, actualValue,.001);
+    }   // ends factorial
+
+    @Test
+    public void testAbsoluteValue() {
+        //Given
+        Calculator calculator = new Calculator();
+        double num1 = -948;
+        double expectedValue = 948;
+
+        //When
+        double actualValue = calculator.AbsoluteValue(num1);
+
+        //Then
+        Assert.assertEquals(expectedValue, actualValue,.001);
+    }   // ends factorial
+
+    @Test
+    public void testNthRoot() {
+        //Given
+        Calculator calculator = new Calculator();
+        double num1 = 27;
+        double num2 = 1;
+        double num3 =3;
+        double expectedValue = 3;
+
+        //When
+        double actualValue = calculator.NthRoot(num1, num2, num3);
 
         //Then
         Assert.assertEquals(expectedValue, actualValue,.001);
         System.out.println(expectedValue);
-    }   // ends factorial
+    }   // ends nthroot
 
 } //final brace
 

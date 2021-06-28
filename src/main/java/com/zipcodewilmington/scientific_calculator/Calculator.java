@@ -127,6 +127,27 @@ public class Calculator {
         return result;
     }
 
+    public static double factorial(double input) {
+        double factorialFunction = 1.0;
+        int i;
+        for (i = 2; i <= input; i++) {
+            factorialFunction += factorialFunction * (i - 1);
+        }
+        return factorialFunction;
+    }
+
+    public double AbsoluteValue(double num1) {
+        double result;
+        result = Math.abs(num1); //Absolute value, makes num1 positive, regardless of sign
+        return result;
+    }
+
+    public double NthRoot(double num1, double num2, double num3) {
+        double result;
+        result = Math.pow(num1, (num2/num3)); //squares num1
+        return result;
+    }
+
 
     //public double Factorial(double num1) {
         //double result;

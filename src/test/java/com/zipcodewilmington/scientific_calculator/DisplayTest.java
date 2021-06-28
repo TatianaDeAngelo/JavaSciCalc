@@ -18,4 +18,19 @@ public class DisplayTest { //first brace
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void testClear() {
+        //Given
+        Display display = new Display();
+        String expected = null;
+
+        //When
+        display.clear();
+        String actual = display.getValue();
+
+        //Then
+        Assert.assertEquals(null, actual);
+    }
+
+
 } //ends DisplayTest
